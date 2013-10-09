@@ -1,4 +1,7 @@
 $(document).ready(function () {
+    $("input#roll").click(function(event){
+      event.preventDefault();
+    });
 
   // PSEUDO-CODE:
   //   1- intercept the form submission event using jQuery
