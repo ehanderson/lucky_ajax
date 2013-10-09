@@ -1,9 +1,9 @@
 $(document).ready(function () {
     $("input#roll").click(function(event){
       event.preventDefault(); 
-      var the_roll = Math.floor(Math.random()*6)+1;
-      $.post('/rolls', the_roll, function(response) {
-        $('#die').append(response);
+     
+      $.post('/rolls', function(response) {
+        $('#die').html(response);
       });
   // PSEUDO-CODE:
   //   ***intercept the form submission event using jQuery
@@ -14,3 +14,4 @@ $(document).ready(function () {
   //      "#die" DIV in the DOM using jQuery
     });
   });
+ // var the_roll = Math.floor(Math.random()*6)+1;
